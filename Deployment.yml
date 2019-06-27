@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Deployment
+metadata:
+  name: Goldfield
+  labels:
+    App1: Sonarqube
+    App2: Blackduck
+    App3: Jira
+    App4: Confluence
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    ports:
+    - containerPort: 80
