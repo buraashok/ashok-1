@@ -4,7 +4,7 @@ metadata:
   name: Goldfield
   labels:
     App1: Sonarqube
-    App2: Blackduck
+    App2: Blackduck-1.0
     App3: Jira
     App4: Confluence
 spec:
