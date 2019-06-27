@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: Goldfield
   labels:
-    App1: Sonarqube
+    App1: Sonarqube1.0
     App2: Blackduck
     App3: Jira
     App4: Confluence
