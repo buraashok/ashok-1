@@ -1,15 +1,21 @@
-apiVersion: v1
+apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: Goldfield
+  name: ngnix-deployment
   labels:
-    App1: Sonarqube
-    App2: Blackduck
-    App3: Jira
-    App4: Confluence
+    app: nginx
 spec:
-  containers:
-  - name: nginx
-    image: nginx
-    ports:
-    - containerPort: 80
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.7.9
+        ports:
+        - containerPort: 80
